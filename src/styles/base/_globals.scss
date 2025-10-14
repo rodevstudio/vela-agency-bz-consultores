@@ -1,0 +1,67 @@
+// src/styles/base/_globals.scss
+@use '../abstracts/variables' as variables;
+@use '../abstracts/mixins' as mixins;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  user-select: none;
+  font-family: variables.$fontfamily;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+  position: absolute;
+  display: none;
+}
+
+html {
+  font-size: calc(100vw / 1920 * 10);
+  line-height: 1;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: variables.$fontfamily;
+
+  // @include mixins.md {
+  //   font-size: calc(100vw / 768 * 10);
+  // }
+
+  @include mixins.md {
+    font-size: calc(100vw / 390 * 10);
+  }
+}
+
+body {
+  font-family: variables.$fontfamily;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  outline: none;
+}
+
+.closing {
+  width: 100%;
+  background-color: #333333;
+  padding: 4rem 0;
+
+  p {
+    margin: auto;
+    width: fit-content;
+    font-family: variables.$fontfamily_2;
+    color: variables.$color-white;
+    font-size: 1.4rem;
+  }
+}
