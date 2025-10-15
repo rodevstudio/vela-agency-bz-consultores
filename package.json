@@ -8,9 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fontsource-variable/albert-sans": "^5.2.5",
-    "@fontsource-variable/inter": "^5.2.5",
-    "@fontsource-variable/roboto-flex": "^5.2.8",
+    "@fontsource/poppins": "^5.2.7",
     "axios": "^1.8.3",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.19.1",
