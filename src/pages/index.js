@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import CustomHead from "@components/CustomHead";
+import logo from "@assets/logo/logo.png"
+import logo_w from "@assets/logo/logo_w.jpg"
+import consiste from "@assets/imgs/consiste.png"
 import sinimg from "@assets/imgs/SinInversion.png"
 import conimg from "@assets/imgs/ConInversion.png"
 import inversion from "@assets/imgs/InversionPrevia.png"
@@ -8,9 +11,13 @@ import calendar from "@assets/imgs/Calendar.png"
 import chart from "@assets/icons/ChartUpPink.svg"
 import clock from "@assets/icons/RelojPink.svg"
 import seguridad from "@assets/icons/SecurePink.svg"
+import chartmix from "@assets/icons/ChartUpMixed.svg"
+import igual from "@assets/icons/bars.svg"
+import acelerar from "@assets/icons/Acelerar.svg"
 
 
 export default function Home() {
+  const [faq, setFaq] = useState(0);
   const [value, setValue] = useState("");
   const [v1, setV1] = useState(250000.00)
   const [v2, setV2] = useState(125000.00)
@@ -44,12 +51,26 @@ export default function Home() {
     <>
       <CustomHead page="index" />
       <section className="topbar">
-        <div className="logo"></div>
+        <div className="logo">
+          <div className="img">
+            <Image
+              src={logo}
+              alt={'text'}
+              fill
+              sizes='100vw'
+              priority
+              className="image"
+            />
+          </div>
+        </div>
       </section>
       <section className="hero">
         <h1 className="title">INVERSIÓN EN CULTURA</h1>
-        <h2 className="subtitle">Tranforma tu Impuesto de Sociedades en un 20% de rentabilidad</h2>
+        <h2 className="subtitle">La estrategia fiscal más rentable</h2>
       </section>
+      <div className="textContainer">
+        <p className="text">En BZ Consultores somos especialistas en la <span className="text-bold">deducción fiscal más rentable y sencilla:</span> <br /> inviertes en cultura y obtienes una deducción del 120 de lo aportado. <span className="text-bold">Legal, seguro y rentable</span>.</p>
+      </div>
       <section className="cards-section">
         <IconCard
           icon={chart}
@@ -65,33 +86,86 @@ export default function Home() {
         />
       </section>
       <div className="textContainer">
-        <p className="text">En BZ Consultores somos especialistas en la <span className="text-bold">deducción fiscal más rentable y sencilla:</span> <br /> inviertes en cultura y obtienes una deducción del 120 de lo aportado. <span className="text-bold">Legal, seguro y rentable</span>.</p>
+        <h3 className="header">1. ¿Quién puede beneficiarse?</h3>
+        <p className="text mt3">Esta solución de ahorro fiscal está dirigida a <span className="text-bold">empresas con un pago elevado en el Impuesto de Sociedades</span>, que buscan <span className="text-bold">optimizar su carga fiscal</span> y, al mismo tiempo, obtener una <span className="text-bold">rentabilidad atractiva</span> de manera segura.</p>
       </div>
-      <div className="textContainer">
-        <h3 className="header">¿En qué consiste?</h3>
-        <p className="text">La &quot;inversión en cultura&quot; es una herramienta jurídica sencilla: mediante una inversión en proyectos culturales (música, teatro o danza) los inversores privados obtienen una rentabilidad del 20% a través de una deducción en el Impuesto de Sociedades.</p>
-      </div>
-      <div className="textContainer">
-        <h3 className="header">¿Quién puede beneficiarse?</h3>
-        <p className="text">Esta solución de ahorro fiscal está dirigida a <span className="text-bold">empresas con un pago elevado en el Impuesto de Sociedades</span>, que buscan <span className="text-bold">optimizar su carga fiscal</span> y, al mismo tiempo, obtener una <span className="text-bold">rentabilidad atractiva</span> de manera segura.</p>
-      </div>
-      <div className="textContainer">
-        <p className="text">Colaboramos directamente con <span className="text-bold">directores financieros</span> y <span className="text-bold">fiscalistas internos</span> de grandes empresas y despachos legales para que cada operación sea segura.</p>
-      </div>
-      <div className="textContainer">
-        <h3 className="header">¿Cómo?</h3>
-        <div className="textContainer-left">
-          <p className="text">El funcionamiento es muy sencillo:</p>
-          <ul>
-            <li className="text">El <span className="text-bold">inversor</span> realiza una <span className="text-bold">aportación del 100%</span> (ejemplo: 300.000 €).</li>
-            <li className="text">Esta cantidad genera una <span className="text-bold">deducción fiscal del 120%</span> en el Impuesto de Sociedades (ejemplo: 360.000 €).</li>
-            <li className="text">Además, el inversor recibe una <span className="text-bold">rentabilidad garantizada del 20%</span> (ejemplo: 60.000 €).</li>
-          </ul>
-          <p className="text">De esta manera, tu empresa obtiene un <span className="text-bold">ahorro fiscal muy significativo</span>, al mismo tiempo que logra una <span className="text-bold">rentabilidad segura</span> y contribuye <span className="text-bold">al impulso de la cultura</span>.</p>
+
+      <div className="beneficio-imgs">
+        <div className="container">
+          <div className="beneficioimg">
+            <div className="img">
+              <Image
+                src={acelerar}
+                alt={'text'}
+                fill
+                sizes='100vw'
+                priority
+                className="image"
+              />
+            </div>
+          </div>
+          <p className="text">Mayor inversión</p>
+        </div>
+        <div className="container">
+          <div className="beneficioimg beneficioimg-2">
+            <div className="img">
+              <Image
+                src={igual}
+                alt={'text'}
+                fill
+                sizes='100vw'
+                priority
+                className="image"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="container">
+          <div className="beneficioimg">
+            <div className="img">
+              <Image
+                src={chartmix}
+                alt={'text'}
+                fill
+                sizes='100vw'
+                priority
+                className="image"
+              />
+            </div>
+          </div>
+          <p className="text">Mayor ahorro fiscal</p>
         </div>
       </div>
+
+      <div className="textContainer textContainer-squares">
+        <p className="text text-bold text-blue">Colaboramos directamente con directores financieros, fiscalistas internos de grandes empresas, Family Offices y despachos legales para conseguir optimizar los resultados financieros y reducir la carga fiscal de las empresas</p>
+      </div>
+
+
       <div className="textContainer">
-        <h3 className="header">Pasos a seguir</h3>
+        <h3 className="header">2. ¿En qué consiste?</h3>
+        <p className="text mt3">El inversor y el promotor de un proyecto cultural firman un contrato de financiación mediante el cual intercambian <span className="text-bold">financiación</span> (100% inversión) por un <span className="text-bold">crédito fiscal</span> (120% deducción fiscal). Es decir, el inversor recupera el 100% de su inversión más un 20% de rentabilidad.</p>
+      </div>
+
+      <div className="consiste-imgs">
+        <div className="container">
+          <div className="consisteimg">
+            <div className="img">
+              <Image
+                src={consiste}
+                alt={'text'}
+                fill
+                sizes='100vw'
+                priority
+                className="image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div className="textContainer">
         <p className="text">Con BZ Consultores, el inversor solo invierte en un proyecto seguro y aplica la deducción fiscal en su próximo Impuesto de Sociedades. De todo lo demás, se encargan los profesionales espeicializados.</p>
       </div>
       <section className="cards-section">
@@ -102,28 +176,18 @@ export default function Home() {
         />
         )}
       </section>
-      <div className="calendar-imgs">
-        <div className="calendarimg">
-          <div className="img">
-            <Image
-              src={calendar}
-              alt={'text'}
-              fill
-              sizes='100vw'
-              priority
-              className="image"
-            />
-          </div>
-        </div>
-        <div className="textContainer textContainer-left  textContainer-m0">
-          <h3 className="header">¿Cuándo?</h3>
-          <p className="text">La inversión debe realizarse antes de fin de ejercicio. Cada vez más empresas utilizan esta deducción sencilla y altamente rentable, por lo que los proyectos culturales disponibles se agotan rápido.</p>
-          <p className="text text-bold mt2">¡Invierte ahora y ahorra hasta el 50% de tu Impuesto de Sociedades en julio de 2026!</p>
-        </div>
+
+      <div className="textContainer textContainer-fit textContainer-squares">
+        <p className="text text-bold text-blue">Transforma tu Impuesto de Sociedades en un 20% de rentabilidad</p>
       </div>
-      <section className="hero mt10">
-        <h3 className="header text-white">Pongamos números</h3>
-        <p className="text text-white mt2">“Decidí invertir a través de estaherramienta en el 2024. Hice una aportaciónde 300.000 euros enseptiembre. Recuperé mi inversión y he obtenido un beneficio de 60.000 € en solo 10 meses”.</p>
+
+      <section className="textContainer">
+        <h3 className="header">3. ¿Qué rentabilidad puedo obtener?</h3>
+      </section>
+      <section className="textContainer textContainer-quotes">
+        <div className="quote-left" />
+        <div className="quote-right" />
+        <p className="text">Decidí invertir a través de esta herramienta 300.000 euros en Septiembre de 2024. Recuperé mi inversión y he obtenido un beneficio de 60.000 euros en solo 10 meses.</p>
       </section>
       <section className="inversion-imgs">
         <div className="inversionimg">
@@ -165,22 +229,28 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+
+
       <div className="textContainer">
-        <h3 className="header">CALCULADORA BZ</h3>
+        <h3 className="subtitle text-blue text-bold">Calcula tu ahorro fiscal</h3>
       </div>
       <section className="calculadora">
         <div className="calculadora_interior">
           <div className="left">
-            <p className="text">Introduce la base imponible estimada de tu próximo Impuesto de sociedades y calcula la rentabilidad máxima que puedes obtener.</p>
-            <input
-              type="text" // 👈 Importante: no "number", porque "number" no deja mostrar el símbolo €
-              value={value ? `${Number(value).toLocaleString("es-ES")}€` : ""}
-              onChange={handleChange}
-              placeholder="Ejemplo: 1.000.000€"
-              className="mt5"
-              inputMode="numeric" // muestra teclado numérico en móviles
-              pattern="[0-9]*"
-            />
+            <p className="text text-white">Introduce la base imponible estimada de tu próximo Impuesto de sociedades y calcula la rentabilidad máxima que puedes obtener.</p>
+            <div className="currency-input mt2">
+              <input
+                type="text" // 👈 Importante: no "number", porque "number" no deja mostrar el símbolo €
+                value={value ? `${Number(value).toLocaleString("es-ES")}` : ""}
+                onChange={handleChange}
+                placeholder="Ejemplo: 1.000.000"
+                className=""
+                inputMode="numeric" // muestra teclado numérico en móviles
+                pattern="[0-9]*"
+              />
+            </div>
           </div>
           <div className="calculos">
             <div className="calculos_celdas">
@@ -191,7 +261,7 @@ export default function Home() {
               <p className="text">Deducción inversión</p>
               <p className="text">{Number(v2).toLocaleString("es-ES")} €</p>
             </div>
-            <div className="calculos_celdas">
+            <div className="calculos_celdas calculos_celdas-fin">
               <p className="text">Inversión óptima</p>
               <p className="text">{Number(v3).toLocaleString("es-ES")} €</p>
             </div>
@@ -202,6 +272,113 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className="textContainer">
+        <h3 className="header">4. ¿Cuándo invertir?</h3>
+        <p className="text">Para poder aplicar la deducción en tu próximo Impuesto de Sociedades, debes realizar la inversión
+          <span className="text-bold">antes de que termine el ejercicio</span> correspondiente (por ejemplo, para aplicarla en el Impuesto de Sociedades de 2025, antes de 31 de diciembre de 2025).</p>
+        <p className="text mt2">En todo caso, al ser una de las deducciones más rentables de la normativa actual, es cada vez más demandada, por lo que cuando se agotan los proyectos a financiar, es necesario esperar al siguiente ejercicio para poder invertir.</p>
+      </div>
+
+      <div className="calendar-imgs mt4">
+        <div className="calendarimg">
+          <div className="img">
+            <Image
+              src={calendar}
+              alt={'text'}
+              fill
+              sizes='100vw'
+              priority
+              className="image"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="textContainer mt4 textContainer-fit textContainer-squares">
+        <p className="text text-bold text-blue">¡Invierte ahora y ahorra hasta el 50% de tu Impuesto de Sociedades en julio de 2026!</p>
+      </div>
+
+      <div className="textContainer">
+        <div className="button">Contáctanos para empezar</div>
+      </div>
+
+      <div className="textContainer">
+        <h3 className="header header-light">Preguntas frecuentes​</h3>
+        <div className="faqs">
+          <div className="faq">
+            <div onClick={() => setFaq(prev => prev === 1 ? 0 : 1)} className="faq_top"><p className="text text-bold">¿Es segura esta inversión?</p> <div className={`chevron ${faq === 1 ? 'chevron-up' : ''}`} /></div>
+            {faq === 1 && <div className="faq_text">
+              <p className="text">La normativa que regula este incentivo fiscal se encuentra en la Ley del Impuesto sobre Sociedades, en sus artículos 36 y 39.7.</p>
+              <p className="text mt2">Puedes consultar aquí: <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/manual-sociedades-2024/capitulo-06-liquidacion-is-determinacion-tributaria/cuota-liquida-casilla-00592/deducc-incentiv-determ-activ-sujetas-lis/deducc-incent-determinadas-actividades-periodo-impositivo/deducc-invers-espectaculos-vivo-artes-lis.html#:~:text=El%20porcentaje%20de%20deducci%C3%B3n%20aplicable,de%20artes%20esc%C3%A9nicas%20y%20musicales." target="_blank" rel="noreferrer">Deducción por inversiones en espectáculos en vivo de artes escénicas y musicales.</a></p>
+            </div>}
+          </div>
+          <div className="faq">
+            <div onClick={() => setFaq(prev => prev === 2 ? 0 : 2)} className="faq_top"><p className="text text-bold">¿Es segura esta inversión?</p> <div className={`chevron ${faq === 2 ? 'chevron-up' : ''}`} /></div>
+            {faq === 2 && <div className="faq_text">
+              <p className="text">En BZ Consultores nos ocupamos del proceso de principio a fin, con todas las garantías legales para que tú solo obtengas la rentabilidad del 20% en tu próximo impuesto:</p>
+              <div className="bullets">
+                <div className="b"><div className="square" /><p className="text">Auditoría de los proyectos de los promotores</p></div>
+                <div className="b"><div className="square" /><p className="text">Contrato de financiación</p></div>
+                <div className="b"><div className="square" /><p className="text">Certificados de los organismos correspondientes</p></div>
+                <div className="b"><div className="square" /><p className="text">Comunicación a la Administración Tributaria.</p></div>
+              </div>
+            </div>}
+          </div>
+          <div className="faq">
+            <div onClick={() => setFaq(prev => prev === 3 ? 0 : 3)} className="faq_top"><p className="text text-bold">¿Qué límite hay para invertir en el ejercicio?</p> <div className={`chevron ${faq === 3 ? 'chevron-up' : ''}`} /></div>
+            {faq === 3 && <div className="faq_text">
+              <p className="text">La deducción aplicada te permite ahorrar hasta el 50% de tu Impuesto de Sociedades.</p>
+            </div>}
+          </div>
+          <div className="faq faq-bn">
+            <div onClick={() => setFaq(prev => prev === 4 ? 0 : 4)} className="faq_top"><p className="text text-bold">¿Y si invierto más y no puedo aplicar toda la deducción generada? </p> <div className={`chevron ${faq === 4 ? 'chevron-up' : ''}`} /></div>
+            {faq === 4 && <div className="faq_text">
+              <p className="text">La deducción generada y no aplicada en el ejercicio no la pierdes, puedes aplicarla en los próximos 15 ejercicios.</p>
+            </div>}
+          </div>
+        </div>
+      </div>
+
+      <div className="footer">
+        <div className="footer_top">
+          <div className="footer_logo">
+            <div className="logo">
+              <div className="img">
+                <Image
+                  src={logo_w}
+                  alt={'text'}
+                  fill
+                  sizes='100vw'
+                  priority
+                  className="image"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="footer_text">
+            <p className="">INFORMACIÓN DE CONTACTO</p>
+            <p className="mt2">Llámanos 932 096 399</p>
+            <p className="mt2">bz@bzconsultores.es</p>
+            <p className="mt2">Tuset 27 7º-1ª 08006 Barcelona</p>
+          </div>
+          <div className="footer_text">
+            <p className="">HORARIO DE APERTURA</p>
+            <p className="mt2">Lun - Jue 9-14h | 15-18h</p>
+            <p className="mt2">Viernes: 8-15h</p>
+          </div>
+        </div>
+        <div className="footer_bottom">
+          <p>BZ Consultores C 2025 Todos los derechos reservados</p>
+          <div className="footer_bottom_right">
+            <p>POLÍTICA DE COOKIES</p>
+            <p>|</p>
+            <p>POLÍTICA DE PRIVACIDAD</p>
+            <p>|</p>
+            <p>AVISO LEGAL</p>
+          </div>
+        </div>
+      </div>
+
     </>
   );
 }

@@ -17,16 +17,15 @@
 
 .header {
     font-size: 4.8rem;
-    font-weight: 400;
+    font-weight: 800;
     letter-spacing: -.2;
     color: black;
-}
 
-@for $i from 1 through 15 {
-    .mt#{$i} {
-        margin-top: #{$i}rem;
+    &-light {
+        font-weight: 400;
     }
 }
+
 
 .text {
     font-size: 2.3rem;
@@ -49,6 +48,10 @@
     &-white {
         color: white;
     }
+
+    &-blue {
+        color: variables.$color-azul;
+    }
 }
 
 .topbar {
@@ -63,8 +66,18 @@
     .logo {
         width: 12rem;
         height: 12rem;
-        background-color: variables.$color-azul;
+        position: relative;
 
+        .img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+
+            .image {
+                object-fit: contain;
+            }
+        }
     }
 }
 
@@ -141,6 +154,84 @@
     margin: auto;
     margin-top: 15rem;
 
+    &-squares {
+        position: relative;
+        padding: 3rem;
+        margin-top: 10rem;
+
+        &::after {
+            content: '';
+            height: 7rem;
+            aspect-ratio: 1/1;
+            background-color: rgba(0, 0, 0, 0);
+            border-top: 4px solid variables.$color-azul;
+            border-left: 4px solid variables.$color-azul;
+            position: absolute;
+            left: 0rem;
+            top: 0rem
+        }
+
+        &::before {
+            content: '';
+            height: 7rem;
+            aspect-ratio: 1/1;
+            background-color: rgba(0, 0, 0, 0);
+            border-right: 4px solid variables.$color-azul;
+            border-bottom: 4px solid variables.$color-azul;
+            position: absolute;
+            right: 0rem;
+            bottom: 0rem
+        }
+    }
+
+    &-quotes {
+        position: relative;
+        padding: 3rem;
+        margin-top: 5rem;
+        width: fit-content;
+
+        p {
+            max-width: 100rem;
+            margin: auto;
+            text-align: center;
+        }
+
+        .quote-left {
+            content: '';
+            width: 4rem;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, 0);
+            background-image: url('../../assets/imgs/Quote.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: 0rem;
+            top: 0rem;
+        }
+
+        .quote-right {
+            content: '';
+            width: 4rem;
+            height: 3rem;
+            background-color: rgba(0, 0, 0, 0);
+            background-image: url('../../assets/imgs/Quote.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            right: 0rem;
+            bottom: 0rem;
+            transform: rotate(180deg);
+        }
+
+    }
+
+    &-fit {
+        width: fit-content;
+        padding: 3rem 5rem;
+    }
+
     h3 {
         margin-bottom: 2rem;
     }
@@ -153,30 +244,7 @@
         text-align: left;
     }
 
-    ul {
-        margin: 3rem 0;
-        padding-left: 4rem;
 
-        li {
-            position: relative;
-            margin-bottom: 1.5rem;
-
-            &:last-of-type {
-                margin-bottom: 0;
-            }
-
-            &::after {
-                content: '';
-                width: 1rem;
-                height: 1rem;
-                background-color: black;
-                border-radius: 50%;
-                position: absolute;
-                left: -2rem;
-                top: .5rem
-            }
-        }
-    }
 }
 
 .numcard {
@@ -198,24 +266,17 @@
 }
 
 .calendar-imgs {
-    width: 90%;
-    max-width: 100rem;
+    width: 100%;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
-
 }
 
 .calendarimg {
     position: relative;
-    width: 42rem;
-    height: 36.4rem;
-
-    &-2 {
-        height: 16.4rem;
-    }
+    width: 22rem;
+    height: 21.3rem;
 
     .img {
         width: 100%;
@@ -267,15 +328,16 @@
 
 .calculadora {
     width: 100%;
-    background-color: variables.$color-gris-oscuro;
+    background-color: variables.$color-azul;
     padding: 5rem 0;
 
     &_interior {
         display: flex;
         gap: 5rem;
         width: 90%;
-        max-width: 130rem;
+        max-width: 120rem;
         margin: 0 auto;
+        justify-content: space-between;
 
         .left {
             display: flex;
@@ -310,10 +372,316 @@
     }
 }
 
-input {
-    width: 30rem;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    border: none;
-    color: variables.$color-azul;
+.currency-input {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    input {
+        position: relative;
+        width: 100%;
+        padding: 1.5rem 4rem 1.5rem 2rem;
+        border-radius: 8px;
+        border: none;
+        font-size: 2.3rem;
+        color: variables.$color-azul;
+
+        &::placeholder {
+            color: variables.$color-azul;
+        }
+
+    }
+
+    &::after {
+        content: "€";
+        position: absolute;
+        right: 2rem;
+        top: 50%;
+        font-size: 2.3rem;
+        transform: translateY(-50%);
+        color: variables.$color-azul;
+        pointer-events: none;
+    }
+}
+
+
+.beneficio-imgs {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    margin-top: 11rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+
+}
+
+.beneficioimg {
+    position: relative;
+    width: 18.3rem;
+    height: 12rem;
+
+    &-2 {
+        height: 10.1rem;
+    }
+
+    .img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+
+        .image {
+            object-fit: contain;
+        }
+    }
+}
+
+.consiste-imgs {
+    width: 100%;
+    margin-top: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.consisteimg {
+    position: relative;
+    width: 91.4rem;
+    height: 20.6rem;
+
+    .img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+
+        .image {
+            object-fit: contain;
+        }
+    }
+}
+
+
+.button {
+    padding: 1.5rem 2rem;
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$color-azul;
+    border-radius: 12px;
+    font-size: 3.2rem;
+    color: white;
+    transition: all .3s ease;
+
+    &:hover {
+        background-color: variables.$color-rosa;
+    }
+}
+
+
+.faqs {
+    width: 100%;
+    max-width: 110rem;
+
+    .faq {
+        width: 100%;
+        position: relative;
+        padding: 2rem 0;
+
+        &::after {
+            position: absolute;
+            bottom: 0;
+            height: 1px;
+            content: "";
+            left: 4rem;
+            right: 4rem;
+            background-color: variables.$color-rosa;
+        }
+
+        &-bn {
+            &::after {
+                display: none;
+            }
+        }
+
+        &_top {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(255, 255, 255);
+            padding: 1rem;
+            border-radius: 4px;
+            transition: all .3s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(variables.$color-rosa, 0.05);
+            }
+
+            .chevron {
+                width: 1.6rem;
+                height: 1.6rem;
+                border-top: 5px solid variables.$color-rosa;
+                border-right: 5px solid variables.$color-rosa;
+                position: relative;
+                rotate: 135deg;
+                transition: all .3s ease;
+
+                &-up {
+                    rotate: 315deg;
+
+                }
+            }
+        }
+
+        &_text {
+            text-align: left;
+            margin-top: 3rem;
+
+            a {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            .bullets {
+                margin-top: 2rem;
+                padding-left: 10rem;
+
+                .b {
+                    position: relative;
+                    margin-bottom: 1.5rem;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    .square {
+                        width: 1.7rem;
+                        height: 2rem;
+                        position: absolute;
+                        left: -3rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        &::after {
+                            content: '';
+                            height: 65%;
+                            aspect-ratio: 1/1;
+                            background-color: rgba(0, 0, 0, 0);
+                            border-top: 2px solid variables.$color-azul;
+                            border-left: 2px solid variables.$color-azul;
+                            position: absolute;
+                            left: 0rem;
+                            top: 0rem
+                        }
+
+                        &::before {
+                            content: '';
+                            height: 65%;
+                            aspect-ratio: 1/1;
+                            background-color: rgba(0, 0, 0, 0);
+                            border-right: 2px solid variables.$color-azul;
+                            border-bottom: 2px solid variables.$color-azul;
+                            position: absolute;
+                            right: 0rem;
+                            bottom: 0rem
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+.footer {
+    width: 100%;
+    margin-top: 20rem;
+    background-color: variables.$color-azul;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 300;
+
+
+    &_top {
+        padding: 4rem 3rem;
+        display: flex;
+        align-items: flex-start;
+
+    }
+
+    &_logo {
+        flex: 0 1 30%;
+    }
+
+    .logo {
+        width: 8rem;
+        height: 8rem;
+        position: relative;
+
+        .img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+
+            .image {
+                object-fit: contain;
+            }
+        }
+    }
+
+    &_text {
+        flex: 0 1 50rem;
+    }
+
+    &_bottom {
+        font-size: 1.4rem;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.466);
+        padding: 1rem 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &_right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+        }
+
+    }
+
+}
+
+
+
+
+@for $i from 1 through 15 {
+    .mt#{$i} {
+        margin-top: #{$i}rem;
+    }
 }
