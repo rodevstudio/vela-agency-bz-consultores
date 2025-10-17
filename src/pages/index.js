@@ -69,7 +69,8 @@ export default function Home() {
         <h2 className="subtitle">La estrategia fiscal más rentable</h2>
       </section>
       <div className="textContainer">
-        <p className="text">En BZ Consultores somos especialistas en la <span className="text-bold">deducción fiscal más rentable y sencilla:</span> <br /> inviertes en cultura y obtienes una deducción del 120 de lo aportado. <span className="text-bold">Legal, seguro y rentable</span>.</p>
+        <p className="text">En BZ Consultores somos especialistas en la <span className="text-bold">deducción fiscal más rentable y sencilla:</span></p>
+        <p className="text mt2">Inviertes en cultura y obtienes una deducción del 120 de lo aportado. <span className="text-bold">Legal, seguro y rentable</span>.</p>
       </div>
       <section className="cards-section">
         <IconCard
@@ -104,7 +105,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <p className="text">Mayor inversión</p>
+          <p className="text text-sm">Mayor inversión</p>
         </div>
         <div className="container">
           <div className="beneficioimg beneficioimg-2">
@@ -133,11 +134,11 @@ export default function Home() {
               />
             </div>
           </div>
-          <p className="text">Mayor ahorro fiscal</p>
+          <p className="text text-sm">Mayor ahorro fiscal</p>
         </div>
       </div>
 
-      <div className="textContainer textContainer-squares">
+      <div className="textContainer textContainer-squares ">
         <p className="text text-bold text-blue">Colaboramos directamente con directores financieros, fiscalistas internos de grandes empresas, Family Offices y despachos legales para conseguir optimizar los resultados financieros y reducir la carga fiscal de las empresas</p>
       </div>
 
@@ -246,7 +247,6 @@ export default function Home() {
                 value={value ? `${Number(value).toLocaleString("es-ES")}` : ""}
                 onChange={handleChange}
                 placeholder="Ejemplo: 1.000.000"
-                className=""
                 inputMode="numeric" // muestra teclado numérico en móviles
                 pattern="[0-9]*"
               />
@@ -304,38 +304,38 @@ export default function Home() {
 
       <div className="textContainer">
         <h3 className="header header-light">Preguntas frecuentes​</h3>
-        <div className="faqs">
-          <div className="faq">
-            <div onClick={() => setFaq(prev => prev === 1 ? 0 : 1)} className="faq_top"><p className="text text-bold">¿Es segura esta inversión?</p> <div className={`chevron ${faq === 1 ? 'chevron-up' : ''}`} /></div>
-            {faq === 1 && <div className="faq_text">
-              <p className="text">La normativa que regula este incentivo fiscal se encuentra en la Ley del Impuesto sobre Sociedades, en sus artículos 36 y 39.7.</p>
-              <p className="text mt2">Puedes consultar aquí: <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/manual-sociedades-2024/capitulo-06-liquidacion-is-determinacion-tributaria/cuota-liquida-casilla-00592/deducc-incentiv-determ-activ-sujetas-lis/deducc-incent-determinadas-actividades-periodo-impositivo/deducc-invers-espectaculos-vivo-artes-lis.html#:~:text=El%20porcentaje%20de%20deducci%C3%B3n%20aplicable,de%20artes%20esc%C3%A9nicas%20y%20musicales." target="_blank" rel="noreferrer">Deducción por inversiones en espectáculos en vivo de artes escénicas y musicales.</a></p>
-            </div>}
-          </div>
-          <div className="faq">
-            <div onClick={() => setFaq(prev => prev === 2 ? 0 : 2)} className="faq_top"><p className="text text-bold">¿Es segura esta inversión?</p> <div className={`chevron ${faq === 2 ? 'chevron-up' : ''}`} /></div>
-            {faq === 2 && <div className="faq_text">
-              <p className="text">En BZ Consultores nos ocupamos del proceso de principio a fin, con todas las garantías legales para que tú solo obtengas la rentabilidad del 20% en tu próximo impuesto:</p>
-              <div className="bullets">
-                <div className="b"><div className="square" /><p className="text">Auditoría de los proyectos de los promotores</p></div>
-                <div className="b"><div className="square" /><p className="text">Contrato de financiación</p></div>
-                <div className="b"><div className="square" /><p className="text">Certificados de los organismos correspondientes</p></div>
-                <div className="b"><div className="square" /><p className="text">Comunicación a la Administración Tributaria.</p></div>
-              </div>
-            </div>}
-          </div>
-          <div className="faq">
-            <div onClick={() => setFaq(prev => prev === 3 ? 0 : 3)} className="faq_top"><p className="text text-bold">¿Qué límite hay para invertir en el ejercicio?</p> <div className={`chevron ${faq === 3 ? 'chevron-up' : ''}`} /></div>
-            {faq === 3 && <div className="faq_text">
-              <p className="text">La deducción aplicada te permite ahorrar hasta el 50% de tu Impuesto de Sociedades.</p>
-            </div>}
-          </div>
-          <div className="faq faq-bn">
-            <div onClick={() => setFaq(prev => prev === 4 ? 0 : 4)} className="faq_top"><p className="text text-bold">¿Y si invierto más y no puedo aplicar toda la deducción generada? </p> <div className={`chevron ${faq === 4 ? 'chevron-up' : ''}`} /></div>
-            {faq === 4 && <div className="faq_text">
-              <p className="text">La deducción generada y no aplicada en el ejercicio no la pierdes, puedes aplicarla en los próximos 15 ejercicios.</p>
-            </div>}
-          </div>
+      </div>
+      <div className="faqs">
+        <div className="faq">
+          <div onClick={() => setFaq(prev => prev === 1 ? 0 : 1)} className="faq_top"><p className="text text-bold">¿Es segura esta inversión?</p> <div className={`chevron ${faq === 1 ? 'chevron-up' : ''}`} /></div>
+          {faq === 1 && <div className="faq_text">
+            <p className="text">La normativa que regula este incentivo fiscal se encuentra en la Ley del Impuesto sobre Sociedades, en sus artículos 36 y 39.7.</p>
+            <p className="text mt2">Puedes consultar aquí: <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/manual-sociedades-2024/capitulo-06-liquidacion-is-determinacion-tributaria/cuota-liquida-casilla-00592/deducc-incentiv-determ-activ-sujetas-lis/deducc-incent-determinadas-actividades-periodo-impositivo/deducc-invers-espectaculos-vivo-artes-lis.html#:~:text=El%20porcentaje%20de%20deducci%C3%B3n%20aplicable,de%20artes%20esc%C3%A9nicas%20y%20musicales." target="_blank" rel="noreferrer">Deducción por inversiones en espectáculos en vivo de artes escénicas y musicales.</a></p>
+          </div>}
+        </div>
+        <div className="faq">
+          <div onClick={() => setFaq(prev => prev === 2 ? 0 : 2)} className="faq_top"><p className="text text-bold">¿Es segura esta inversión?</p> <div className={`chevron ${faq === 2 ? 'chevron-up' : ''}`} /></div>
+          {faq === 2 && <div className="faq_text">
+            <p className="text">En BZ Consultores nos ocupamos del proceso de principio a fin, con todas las garantías legales para que tú solo obtengas la rentabilidad del 20% en tu próximo impuesto:</p>
+            <div className="bullets">
+              <div className="b"><div className="square" /><p className="text">Auditoría de los proyectos de los promotores</p></div>
+              <div className="b"><div className="square" /><p className="text">Contrato de financiación</p></div>
+              <div className="b"><div className="square" /><p className="text">Certificados de los organismos correspondientes</p></div>
+              <div className="b"><div className="square" /><p className="text">Comunicación a la Administración Tributaria.</p></div>
+            </div>
+          </div>}
+        </div>
+        <div className="faq">
+          <div onClick={() => setFaq(prev => prev === 3 ? 0 : 3)} className="faq_top"><p className="text text-bold">¿Qué límite hay para invertir en el ejercicio?</p> <div className={`chevron ${faq === 3 ? 'chevron-up' : ''}`} /></div>
+          {faq === 3 && <div className="faq_text">
+            <p className="text">La deducción aplicada te permite ahorrar hasta el 50% de tu Impuesto de Sociedades.</p>
+          </div>}
+        </div>
+        <div className="faq faq-bn">
+          <div onClick={() => setFaq(prev => prev === 4 ? 0 : 4)} className="faq_top"><p className="text text-bold">¿Y si invierto más y no puedo aplicar toda la deducción generada? </p> <div className={`chevron ${faq === 4 ? 'chevron-up' : ''}`} /></div>
+          {faq === 4 && <div className="faq_text">
+            <p className="text">La deducción generada y no aplicada en el ejercicio no la pierdes, puedes aplicarla en los próximos 15 ejercicios.</p>
+          </div>}
         </div>
       </div>
 
@@ -370,11 +370,11 @@ export default function Home() {
         <div className="footer_bottom">
           <p>BZ Consultores C 2025 Todos los derechos reservados</p>
           <div className="footer_bottom_right">
-            <p>POLÍTICA DE COOKIES</p>
-            <p>|</p>
-            <p>POLÍTICA DE PRIVACIDAD</p>
-            <p>|</p>
-            <p>AVISO LEGAL</p>
+            <a href="https://www.bzconsultores.es/politica-cookies/" target="_blank" rel="noreferrer">POLÍTICA DE COOKIES</a>
+            <p className="dn">|</p>
+            <a href="https://www.bzconsultores.es/politica-privacidad/" target="_blank" rel="noreferrer">POLÍTICA DE PRIVACIDAD</a>
+            <p className="dn">|</p>
+            <a href="https://www.bzconsultores.es/aviso-legal/" target="_blank" rel="noreferrer">AVISO LEGAL</a>
           </div>
         </div>
       </div>
