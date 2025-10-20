@@ -70,7 +70,7 @@ export default function Home() {
       </section>
       <div className="textContainer">
         <p className="text">En BZ Consultores somos especialistas en la <span className="text-bold">deducción fiscal más rentable y sencilla:</span></p>
-        <p className="text mt2">Inviertes en cultura y obtienes una deducción del 120 de lo aportado. <span className="text-bold">Legal, seguro y rentable</span>.</p>
+        <p className="text mt2">Inviertes en cultura y obtienes una deducción del 120% de lo aportado. <span className="text-bold">Legal, seguro y rentable</span>.</p>
       </div>
       <section className="cards-section">
         <IconCard
@@ -299,7 +299,7 @@ export default function Home() {
       </div>
 
       <div className="textContainer">
-        <div className="button">Contáctanos para empezar</div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeDgQO-MD1rxP7dsa6-dCS_K8H0ISIXuET5EGekCAVVG3mRNw/viewform?usp=header" target="_blank" rel="noreferrer" className="button">Contáctanos para empezar</a>
       </div>
 
       <div className="textContainer">
@@ -310,11 +310,11 @@ export default function Home() {
           <div onClick={() => setFaq(prev => prev === 1 ? 0 : 1)} className="faq_top"><p className="text text-bold">¿Es segura esta inversión?</p> <div className={`chevron ${faq === 1 ? 'chevron-up' : ''}`} /></div>
           {faq === 1 && <div className="faq_text">
             <p className="text">La normativa que regula este incentivo fiscal se encuentra en la Ley del Impuesto sobre Sociedades, en sus artículos 36 y 39.7.</p>
-            <p className="text mt2">Puedes consultar aquí: <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/manual-sociedades-2024/capitulo-06-liquidacion-is-determinacion-tributaria/cuota-liquida-casilla-00592/deducc-incentiv-determ-activ-sujetas-lis/deducc-incent-determinadas-actividades-periodo-impositivo/deducc-invers-espectaculos-vivo-artes-lis.html#:~:text=El%20porcentaje%20de%20deducci%C3%B3n%20aplicable,de%20artes%20esc%C3%A9nicas%20y%20musicales." target="_blank" rel="noreferrer">Deducción por inversiones en espectáculos en vivo de artes escénicas y musicales.</a></p>
+            <p className="text mt2">Puedes consultar aquí: <a href="https://sede.agenciatributaria.gob.es/Sede/ayuda/manuales-videos-folletos/manuales-practicos/manual-sociedades-2024/capitulo-06-liquidacion-is-determinacion-tributaria/cuota-liquida-casilla-00592/deducc-incentiv-determ-activ-sujetas-lis/deducc-incent-determinadas-actividades-periodo-impositivo/deducc-contribuy-participa-financ-producc-vivo.html" target="_blank" rel="noreferrer">Deducción por inversiones en espectáculos en vivo de artes escénicas y musicales.</a></p>
           </div>}
         </div>
         <div className="faq">
-          <div onClick={() => setFaq(prev => prev === 2 ? 0 : 2)} className="faq_top"><p className="text text-bold">¿Es segura esta inversión?</p> <div className={`chevron ${faq === 2 ? 'chevron-up' : ''}`} /></div>
+          <div onClick={() => setFaq(prev => prev === 2 ? 0 : 2)} className="faq_top"><p className="text text-bold">¿Quién se encarga de todos los trámites legales?</p> <div className={`chevron ${faq === 2 ? 'chevron-up' : ''}`} /></div>
           {faq === 2 && <div className="faq_text">
             <p className="text">En BZ Consultores nos ocupamos del proceso de principio a fin, con todas las garantías legales para que tú solo obtengas la rentabilidad del 20% en tu próximo impuesto:</p>
             <div className="bullets">
