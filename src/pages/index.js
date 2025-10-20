@@ -188,7 +188,7 @@ export default function Home() {
       <section className="textContainer textContainer-quotes">
         <div className="quote-left" />
         <div className="quote-right" />
-        <p className="text">Decidí invertir a través de esta herramienta 300.000 euros en Septiembre de 2024. Recuperé mi inversión y he obtenido un beneficio de 60.000 euros en solo 10 meses.</p>
+        <p className="text">Decidí invertir a través de esta herramienta 300.000 euros en Septiembre. Recuperé mi inversión y he obtenido un beneficio de 60.000 euros en solo 10 meses.</p>
       </section>
       <section className="inversion-imgs">
         <div className="inversionimg">
@@ -275,8 +275,7 @@ export default function Home() {
 
       <div className="textContainer">
         <h3 className="header">4. ¿Cuándo invertir?</h3>
-        <p className="text">Para poder aplicar la deducción en tu próximo Impuesto de Sociedades, debes realizar la inversión
-          <span className="text-bold">antes de que termine el ejercicio</span> correspondiente (por ejemplo, para aplicarla en el Impuesto de Sociedades de 2025, antes de 31 de diciembre de 2025).</p>
+        <p className="text">Para poder aplicar la deducción en tu próximo Impuesto de Sociedades, debes realizar la inversión <span className="text-bold">antes de que termine el ejercicio fiscal</span> correspondiente.</p>
         <p className="text mt2">En todo caso, al ser una de las deducciones más rentables de la normativa actual, es cada vez más demandada, por lo que cuando se agotan los proyectos a financiar, es necesario esperar al siguiente ejercicio para poder invertir.</p>
       </div>
 
@@ -295,7 +294,7 @@ export default function Home() {
         </div>
       </div>
       <div className="textContainer mt4 textContainer-fit textContainer-squares">
-        <p className="text text-bold text-blue">¡Invierte ahora y ahorra hasta el 50% de tu Impuesto de Sociedades en julio de 2026!</p>
+        <p className="text text-bold text-blue">¡Invierte ahora y ahorra hasta el 50% de tu próximo Impuesto de Sociedades!</p>
       </div>
 
       <div className="textContainer">
