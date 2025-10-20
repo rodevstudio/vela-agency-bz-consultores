@@ -299,7 +299,7 @@ export default function Home() {
       </div>
 
       <div className="textContainer">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeDgQO-MD1rxP7dsa6-dCS_K8H0ISIXuET5EGekCAVVG3mRNw/viewform?usp=header" target="_blank" rel="noreferrer" className="button">Contáctanos para empezar</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeDgQO-MD1rxP7dsa6-dCS_K8H0ISIXuET5EGekCAVVG3mRNw/viewform?usp=preview" target="_blank" rel="noreferrer" className="button">Contáctanos para empezar</a>
       </div>
 
       <div className="textContainer">
