@@ -51,7 +51,7 @@ export default function Home() {
     <>
       <CustomHead page="index" />
       <section className="topbar">
-        <div className="logo">
+        <a href="https://www.bzconsultores.es/" target="_blank" rel="noreferrer" className="logo">
           <div className="img">
             <Image
               src={logo}
@@ -62,7 +62,7 @@ export default function Home() {
               className="image"
             />
           </div>
-        </div>
+        </a>
       </section>
       <section className="hero">
         <h1 className="title">INVERSIÓN EN CULTURA</h1>
